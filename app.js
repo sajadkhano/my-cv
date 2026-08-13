@@ -271,9 +271,14 @@ async function checkServer() {
 }
 
 async function fetchServerImages() {
-    if (!serverAvailable) return;
+    if (serverAvailable) {
+        try {
+            const res = await fetch('/api/images');
+            if (res.ok) { serverImages = await res.json(); return; }
+        } catch (_) {}
+    }
     try {
-        const res = await fetch('/api/images');
+        const res = await fetch('data/images.json');
         if (res.ok) serverImages = await res.json();
     } catch (_) {}
 }
@@ -285,18 +290,22 @@ async function fetchPresentations() {
             if (res.ok) { presentationsData = await res.json(); return; }
         } catch (_) {}
     }
-    // fallback: old localStorage base64 data
+    try {
+        const res = await fetch('data/presentations.json');
+        if (res.ok) { presentationsData = await res.json(); return; }
+    } catch (_) {}
     presentationsData = JSON.parse(localStorage.getItem('portfolio_presentations')) || [];
 }
 
-// ============================================================
-// EDITABLE CONTENT SYSTEM (Inline Editing for Admin)
-// ============================================================
-
 async function fetchContent() {
-    if (!serverAvailable) return;
+    if (serverAvailable) {
+        try {
+            const res = await fetch('/api/content');
+            if (res.ok) { serverContent = await res.json(); return; }
+        } catch (_) {}
+    }
     try {
-        const res = await fetch('/api/content');
+        const res = await fetch('data/content.json');
         if (res.ok) serverContent = await res.json();
     } catch (_) {}
 }
@@ -899,6 +908,16 @@ async function fetchCV() {
             }
         } catch (_) {}
     }
+    try {
+        const res = await fetch('data/cv.json');
+        if (res.ok) {
+            const data = await res.json();
+            if (data && data.fileUrl) {
+                cvData = data;
+                return;
+            }
+        }
+    } catch (_) {}
     // Fallback: localStorage
     const savedCV   = localStorage.getItem('portfolio_cv_file');
     const savedName = localStorage.getItem('portfolio_cv_filename') || 'Sajjad_Khaldoon_Hano_CV.pdf';
