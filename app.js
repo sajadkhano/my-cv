@@ -254,9 +254,14 @@ let serverAvailable   = false;
 let serverContent     = {};  // editable text content from server
 let galleryData       = [];  // gallery photos from server
 
-// ============================================================
-// SERVER API LAYER
-// ============================================================
+function fixUrl(url) {
+    if (!url) return url;
+    if (typeof url !== 'string') return url;
+    if (url.startsWith('/uploads/')) return 'uploads/' + url.substring(9);
+    if (url.startsWith('/assets/')) return 'assets/' + url.substring(8);
+    if (url.startsWith('/') && !url.startsWith('//')) return url.substring(1);
+    return url;
+}
 
 async function checkServer() {
     try {
@@ -630,9 +635,9 @@ const profilePhotoInput  = document.getElementById('profile-photo-input');
 const profilePlaceholder = document.getElementById('profile-placeholder');
 
 function initProfilePhoto() {
-    const src = serverImages['profile'] || localStorage.getItem('portfolio_profile_photo');
+    const src = fixUrl(serverImages['profile']) || localStorage.getItem('portfolio_profile_photo');
     if (src && profilePhotoCircle) {
-        profilePhotoCircle.style.backgroundImage = `url(${src})`;
+        profilePhotoCircle.style.backgroundImage = `url(${fixUrl(src)})`;
         if (profilePlaceholder) profilePlaceholder.style.opacity = '0';
     }
 }
@@ -764,12 +769,12 @@ const backgroundThemes = {
 
 function initBackground() {
     // Server image takes priority, then localStorage
-    const serverBg = serverImages['hero_bg'];
+    const serverBg = fixUrl(serverImages['hero_bg']);
     const localBg  = localStorage.getItem('portfolio_custom_bg');
     const preset   = localStorage.getItem('portfolio_preset_bg') || 'default';
 
     if (serverBg) {
-        document.documentElement.style.setProperty('--hero-bg-url', `url(${serverBg})`);
+        document.documentElement.style.setProperty('--hero-bg-url', `url(${fixUrl(serverBg)})`);
         bgPresetButtons.forEach(b => b.classList.remove('active'));
     } else if (localBg) {
         document.documentElement.style.setProperty('--hero-bg-url', `url(${localBg})`);
@@ -985,7 +990,7 @@ function renderCV() {
     }
 
     // CV Exists — Render Presentation Deck Card View
-    const coverSrc = cvData.coverUrl || cvData.coverData || null;
+    const coverSrc = fixUrl(cvData.coverUrl || cvData.coverData || null);
     const hasCover = !!coverSrc;
     const bgStyle  = hasCover ? `background-image:url(${coverSrc})` : '';
     const extraCls = hasCover ? '' : 'generated-slide';
@@ -1215,7 +1220,7 @@ function viewCV() {
         return;
     }
     if (cvData.fileUrl) {
-        window.open(cvData.fileUrl, '_blank');
+        window.open(fixUrl(cvData.fileUrl), '_blank');
     } else if (cvData.fileData) {
         const win = window.open();
         if (win) {
@@ -1238,7 +1243,7 @@ function downloadCV() {
     }
     if (cvData.fileUrl) {
         const a = document.createElement('a');
-        a.href = cvData.fileUrl;
+        a.href = fixUrl(cvData.fileUrl);
         a.download = cvData.fileName || 'Sajjad_Khaldoon_Hano_CV.pdf';
         document.body.appendChild(a);
         a.click();
@@ -1465,7 +1470,7 @@ function openPresentation(id) {
     const doc = presentationsData.find(d => d.id === id);
     if (!doc) return;
     if (doc.fileUrl) {
-        window.open(doc.fileUrl, '_blank');
+        window.open(fixUrl(doc.fileUrl), '_blank');
     } else if (doc.fileData) {
         // Legacy base64
         const a = document.createElement('a');
@@ -1490,7 +1495,7 @@ function renderProjects() {
     let html = '';
     projectsData.forEach(proj => {
         // Server image takes priority over stored/default
-        const imgSrc = serverImages[`project_${proj.id}`] || proj.img;
+        const imgSrc = fixUrl(serverImages[`project_${proj.id}`] || proj.img);
         html += `
             <div class="project-card reveal">
                 <div class="project-img-wrapper">
@@ -1673,7 +1678,7 @@ function renderPresentations() {
     }
 
     grid.innerHTML = presentationsData.map(doc => {
-        const coverSrc = doc.coverUrl || doc.coverData || null;
+        const coverSrc = fixUrl(doc.coverUrl || doc.coverData || null);
         const hasCover = !!coverSrc;
         const bgStyle  = hasCover ? `background-image:url(${coverSrc})` : '';
         const extraCls = hasCover ? '' : 'generated-slide';
