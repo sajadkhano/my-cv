@@ -1,0 +1,515 @@
+[
+  {
+    "id": "doc-5c468fc68720",
+    "title": "Modern_Coiled_Tubing",
+    "fileName": "Modern_Coiled_Tubing.pdf",
+    "fileUrl": "/uploads/pres_7bcbd0f254924dd38c133f1005af9b33.pdf",
+    "coverUrl": "/uploads/cover_b1c3a45b9647488ba196d163fc55a6fb.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-07-27T02:52:41.177706"
+  },
+  {
+    "id": "doc-2cfad23edbdf",
+    "title": "Coiled_Tubing_Engineering_Analysis",
+    "fileName": "Coiled_Tubing_Engineering_Analysis.pdf",
+    "fileUrl": "/uploads/pres_4c0c27891c2b401a8438b57412d1ef10.pdf",
+    "coverUrl": "/uploads/cover_a3f5a4764c88454f9b6fa3ec9ff3105c.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-07-27T02:53:43.348516"
+  },
+  {
+    "id": "doc-debcfaeb4911",
+    "title": "Geomechanical_Modeling",
+    "fileName": "Geomechanical_Modeling.pdf",
+    "fileUrl": "/uploads/pres_6b965661246a4cc1a26c610b7dce5736.pdf",
+    "coverUrl": "/uploads/cover_23fba7314c014df9beb889fda28f8d39.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:56:23.497927"
+  },
+  {
+    "id": "doc-9d1a30ec0f06",
+    "title": "Waterflooding_Recovery_Mechanics",
+    "fileName": "Waterflooding_Recovery_Mechanics.pdf",
+    "fileUrl": "/uploads/pres_e216737196a94cadaa8d7761da6ac5d4.pdf",
+    "coverUrl": "/uploads/cover_3aa005ca4c524bf4bb7167a186a294f7.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:57:12.867854"
+  },
+  {
+    "id": "doc-3e88fe030f5f",
+    "title": "Multiphase_Flow_Dynamics",
+    "fileName": "Multiphase_Flow_Dynamics.pdf",
+    "fileUrl": "/uploads/pres_038793e5b7e64409af0a36cd2641b3ff.pdf",
+    "coverUrl": "/uploads/cover_844340678149456d91f4b54c04fbe3bd.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:57:22.740586"
+  },
+  {
+    "id": "doc-7e0221e44ee3",
+    "title": "Precision_ESP_Engineering",
+    "fileName": "Precision_ESP_Engineering.pdf",
+    "fileUrl": "/uploads/pres_638316fc7f6446e288cef391100aeef1.pdf",
+    "coverUrl": "/uploads/cover_e92ba3ddc06d46eeb9aeed264a95aac6.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:57:46.281249"
+  },
+  {
+    "id": "doc-ddf5977ec03e",
+    "title": "Formation_Damage_Lifecycle",
+    "fileName": "Formation_Damage_Lifecycle.pdf",
+    "fileUrl": "/uploads/pres_a2e6b6cb94684c89980fe538c5c5519e.pdf",
+    "coverUrl": "/uploads/cover_96abcbd9ccf646c7a72374ce2a12d792.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:58:00.961046"
+  },
+  {
+    "id": "doc-e57cb8f12b04",
+    "title": "Reservoir_Coning_Dynamics",
+    "fileName": "Reservoir_Coning_Dynamics.pdf",
+    "fileUrl": "/uploads/pres_350672e0d1ac4794941a474cc1fb573a.pdf",
+    "coverUrl": "/uploads/cover_5de0c31a127c42d4a2deef757eb615f6.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:58:12.682128"
+  },
+  {
+    "id": "doc-88454c7e16ac",
+    "title": "Subsurface_Well_Taxonomy",
+    "fileName": "Subsurface_Well_Taxonomy.pdf",
+    "fileUrl": "/uploads/pres_d2e109156d7f4a2b891c7e437b53d6e5.pdf",
+    "coverUrl": "/uploads/cover_3d8e2d3a2b324cd0b53b0ccbf3c4cf44.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T20:58:33.770851"
+  },
+  {
+    "id": "doc-402b6d96227c",
+    "title": "Digital_Reservoir_Simulation",
+    "fileName": "Digital_Reservoir_Simulation.pdf",
+    "fileUrl": "/uploads/pres_55e9416a4c0f486daaee58818b957eb6.pdf",
+    "coverUrl": "/uploads/cover_b1518f296688462c9da2ab0bd98bc007.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:00:45.388248"
+  },
+  {
+    "id": "doc-20624bafa816",
+    "title": "Mastering_the_Breathing_Subsurface",
+    "fileName": "Mastering_the_Breathing_Subsurface.pdf",
+    "fileUrl": "/uploads/pres_f558a297c8a948a5bee0f3f51affbb92.pdf",
+    "coverUrl": "/uploads/cover_f893d5074ca24064ab6c0d50fdca10b8.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:00:56.259140"
+  },
+  {
+    "id": "doc-6c3126925f05",
+    "title": "Hydraulic_Fracturing_Engineering",
+    "fileName": "Hydraulic_Fracturing_Engineering.pdf",
+    "fileUrl": "/uploads/pres_c1e7e7b6c5254a6d953f4adf0dccdc65.pdf",
+    "coverUrl": "/uploads/cover_ed8db66d677b461ba125b20721a36f2e.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:01:07.300270"
+  },
+  {
+    "id": "doc-8c4f830775ed",
+    "title": "Integrated_Field_Development_Framework",
+    "fileName": "Integrated_Field_Development_Framework.pdf",
+    "fileUrl": "/uploads/pres_8499e81fb8d54c39b1ce4e66b9b6b761.pdf",
+    "coverUrl": "/uploads/cover_ec7d8079188f4e7784bd19fd2d41e0e2.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:01:16.025740"
+  },
+  {
+    "id": "doc-83bf8369e91b",
+    "title": "FDP_Digital_Blueprint",
+    "fileName": "FDP_Digital_Blueprint.pdf",
+    "fileUrl": "/uploads/pres_32cce14a7bc942438ed47ec61ba938c7.pdf",
+    "coverUrl": "/uploads/cover_586674e72a2b413a98f62e0aa0adeccf.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:01:30.388855"
+  },
+  {
+    "id": "doc-6578edaf8c7e",
+    "title": "Natural_Gas_Processing_Engineering",
+    "fileName": "Natural_Gas_Processing_Engineering.pdf",
+    "fileUrl": "/uploads/pres_e22072f3b2e14624a5a43c33c6b6db8b.pdf",
+    "coverUrl": "/uploads/cover_c086e85c7d304ef784898ff80b27a057.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:01:39.669688"
+  },
+  {
+    "id": "doc-2a8ac6f5da5f",
+    "title": "Mastering_the_Breathing_Subsurface",
+    "fileName": "Mastering_the_Breathing_Subsurface.pdf",
+    "fileUrl": "/uploads/pres_ebf7048e4e684721bac01dcee4f56e87.pdf",
+    "coverUrl": "/uploads/cover_a7bbf509a8524ec2a5c006430b1cb7d9.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:01:57.026017"
+  },
+  {
+    "id": "doc-7bcf38cff559",
+    "title": "Subsurface_Traffic_Grid",
+    "fileName": "Subsurface_Traffic_Grid.pdf",
+    "fileUrl": "/uploads/pres_2fbf7442a0ab4ce9995452534e74d3ff.pdf",
+    "coverUrl": "/uploads/cover_892fcc62640d4ec58b719f005682cd3f.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:02:13.224713"
+  },
+  {
+    "id": "doc-08d5dfca7087",
+    "title": "The_Wellbore_as_a_Living_Organism_A_Redefined_Taxonomy_of_Drilling",
+    "fileName": "The_Wellbore_as_a_Living_Organism_A_Redefined_Taxonomy_of_Drilling.pdf",
+    "fileUrl": "/uploads/pres_34231b8fd2f44353aeb79660c56c6771.pdf",
+    "coverUrl": "/uploads/cover_bd0f2be7ec2245b8b7457aa0a2ceb6c4.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:04:17.447472"
+  },
+  {
+    "id": "doc-2e92a1a9bb0f",
+    "title": "Cyber Physical Wellbore Systems",
+    "fileName": "Cyber Physical Wellbore Systems.pdf",
+    "fileUrl": "/uploads/pres_beed58d92fd64392bef8157ca74517e4.pdf",
+    "coverUrl": "/uploads/cover_4ebde5b4891f4e87ad832b0797f67503.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:04:27.104848"
+  },
+  {
+    "id": "doc-2ae4380cd11c",
+    "title": "Wireline Intervention Blueprint",
+    "fileName": "Wireline Intervention Blueprint.pdf",
+    "fileUrl": "/uploads/pres_3657dcc64694496b81909fc04a1eec49.pdf",
+    "coverUrl": "/uploads/cover_e2deb56b920345dc8144e43dd21ed6f7.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:07:18.600268"
+  },
+  {
+    "id": "doc-796e36260d1f",
+    "title": "Subsurface Fluid Thermodynamics",
+    "fileName": "Subsurface Fluid Thermodynamics.pdf",
+    "fileUrl": "/uploads/pres_36cdff4d4b274c16b63fdd5c7afdfe2c.pdf",
+    "coverUrl": "/uploads/cover_523f7bf64c1f4bfa95b7220b87b37df0.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:07:29.686191"
+  },
+  {
+    "id": "doc-f2a6ee066780",
+    "title": "Digital Subsurface Engineering",
+    "fileName": "Digital Subsurface Engineering.pdf",
+    "fileUrl": "/uploads/pres_92081bf58fb34133bb6c2c8394a3ec12.pdf",
+    "coverUrl": "/uploads/cover_b519d544da5547c6adf6d7f5949537be.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:08:12.422205"
+  },
+  {
+    "id": "doc-1f22cb463de2",
+    "title": "Petroleum Corrosion Inhibition",
+    "fileName": "Petroleum Corrosion Inhibition.pdf",
+    "fileUrl": "/uploads/pres_de0b68ce81bb4523977567c8c22b9bef.pdf",
+    "coverUrl": "/uploads/cover_b9f629e375b94677a3a9ce91dfa3e0a6.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:08:18.980102"
+  },
+  {
+    "id": "doc-726c152fe84b",
+    "title": "Clinical Geo Engineering",
+    "fileName": "Clinical Geo Engineering.pdf",
+    "fileUrl": "/uploads/pres_d57fea2736264a22a97de3bfff621282.pdf",
+    "coverUrl": "/uploads/cover_8ef3ab5d97d14833b11b39de94d9d64e.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:08:36.821658"
+  },
+  {
+    "id": "doc-9f330f01b1c0",
+    "title": "Advanced Well Control",
+    "fileName": "Advanced Well Control.pdf",
+    "fileUrl": "/uploads/pres_b9ddb35b80b94e1dbcbd73db8549921f.pdf",
+    "coverUrl": "/uploads/cover_4d35b420497a45179aa70e71bfeafbce.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:08:39.243001"
+  },
+  {
+    "id": "doc-8d238942bebc",
+    "title": "Wellbore Engineering Anatomy",
+    "fileName": "Wellbore Engineering Anatomy.pdf",
+    "fileUrl": "/uploads/pres_955f0f3897f04f51acf1759ee73a47df.pdf",
+    "coverUrl": "/uploads/cover_33272413575846cdb73ed5e755bc1d9d.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:22.958045"
+  },
+  {
+    "id": "doc-19b7c5e810e4",
+    "title": "Subsurface Diagnostic Analytics",
+    "fileName": "Subsurface Diagnostic Analytics.pdf",
+    "fileUrl": "/uploads/pres_1b6297fbef474341a12a14c9d5dff78a.pdf",
+    "coverUrl": "/uploads/cover_2b820f4e107e40ef86e5b15936b0d30f.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:26.695694"
+  },
+  {
+    "id": "doc-5a4111032845",
+    "title": "Rethinking Mud Economics",
+    "fileName": "Rethinking Mud Economics.pdf",
+    "fileUrl": "/uploads/pres_3f95031a705e45ee9f3f6efe0790ec17.pdf",
+    "coverUrl": "/uploads/cover_7e9cc7f2a034418e9a576071b69a9e1e.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:29.724405"
+  },
+  {
+    "id": "doc-80d0597e1542",
+    "title": "Wellhead Engineering Dossier",
+    "fileName": "Wellhead Engineering Dossier.pdf",
+    "fileUrl": "/uploads/pres_5eb8113181944056a0da60be1a4fb4df.pdf",
+    "coverUrl": "/uploads/cover_902b269979d7489983ca86f3c369659b.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:36.041430"
+  },
+  {
+    "id": "doc-8379f2aec64c",
+    "title": "Engineered Lost Circulation Strategies",
+    "fileName": "Engineered Lost Circulation Strategies.pdf",
+    "fileUrl": "/uploads/pres_07e1a26beb5c436ab29ddd1b70df2ef7.pdf",
+    "coverUrl": "/uploads/cover_1cec11bc9f804d50a5978b4a8f8f091b.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:38.785858"
+  },
+  {
+    "id": "doc-98d894298c26",
+    "title": "Advanced Drilling Fluid Physics",
+    "fileName": "Advanced Drilling Fluid Physics.pdf",
+    "fileUrl": "/uploads/pres_2b0b36e0a6c6466c8747e0fd4a63cec7.pdf",
+    "coverUrl": "/uploads/cover_1288692fe1ae4fd2a51657a63f143e68.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:42.272357"
+  },
+  {
+    "id": "doc-1a427f56a21b",
+    "title": "Global LNG Architecture",
+    "fileName": "Global LNG Architecture.pdf",
+    "fileUrl": "/uploads/pres_abec2177badd435ba359ffeec0b97601.pdf",
+    "coverUrl": "/uploads/cover_82da4a3dbc9d4a249fe7a3b2e0afacae.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:10:56.525858"
+  },
+  {
+    "id": "doc-cc6871eef6a2",
+    "title": "Dehydration Vessel Architecture",
+    "fileName": "Dehydration Vessel Architecture.pdf",
+    "fileUrl": "/uploads/pres_adef2a95e3aa47a4b6aae85964b15441.pdf",
+    "coverUrl": "/uploads/cover_afdfa1acf7d1454d8aad953c770d78f1.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:11:19.917828"
+  },
+  {
+    "id": "doc-12f97ae8a6eb",
+    "title": "Gas Dehydration Mastery",
+    "fileName": "Gas Dehydration Mastery.pdf",
+    "fileUrl": "/uploads/pres_dad238e360a64c3fbbeb31d7edaa93f2.pdf",
+    "coverUrl": "/uploads/cover_a50bd064246e427586773e3d7472a60d.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:11:23.252129"
+  },
+  {
+    "id": "doc-5ba0076b8af8",
+    "title": "The Architecture of YES",
+    "fileName": "The Architecture of YES.pdf",
+    "fileUrl": "/uploads/pres_690d102dda79424e823e9e7691e6c614.pdf",
+    "coverUrl": "/uploads/cover_1697da4983524af48c156da29ee4975f.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:11:30.600979"
+  },
+  {
+    "id": "doc-e3e9cf20bfb3",
+    "title": "The Architecture of YES",
+    "fileName": "The Architecture of YES.pdf",
+    "fileUrl": "/uploads/pres_8e07e69e788545c4b29644d531545d9c.pdf",
+    "coverUrl": "/uploads/cover_6d532371c7b3452ea5d266207dde6892.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:12:35.597799"
+  },
+  {
+    "id": "doc-a8dbc43b2f34",
+    "title": "Strategic Pipeline Sizing",
+    "fileName": "Strategic Pipeline Sizing.pdf",
+    "fileUrl": "/uploads/pres_6a739ca673ec485bbe3b7f2281d1cad0.pdf",
+    "coverUrl": "/uploads/cover_dfc99d81b948418396ce109a4817eeca.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:12:37.736230"
+  },
+  {
+    "id": "doc-e45ba99b2beb",
+    "title": "Subsurface Structural Intelligence",
+    "fileName": "Subsurface Structural Intelligence.pdf",
+    "fileUrl": "/uploads/pres_dd742196b52f4e0faa936f850cc18dfa.pdf",
+    "coverUrl": "/uploads/cover_ff31322fb7854efc83c78e6edf6566f9.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:12:39.845106"
+  },
+  {
+    "id": "doc-2caef035c7de",
+    "title": "Precision_ESP_Engineering",
+    "fileName": "Precision_ESP_Engineering.pdf",
+    "fileUrl": "/uploads/pres_7a394ef449734b39b1ea6b5cea46bb14.pdf",
+    "coverUrl": "/uploads/cover_4aff7c51512e4bba8488a908fa80d9c4.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:13:22.814149"
+  },
+  {
+    "id": "doc-cb426bd7ff97",
+    "title": "Reservoir_Fluid_Ternary_Blueprint",
+    "fileName": "Reservoir_Fluid_Ternary_Blueprint.pdf",
+    "fileUrl": "/uploads/pres_b5f796feb0044da1929e050e10c072e7.pdf",
+    "coverUrl": "/uploads/cover_45976518b75a4117a833fa7548ae0fee.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:13:25.383003"
+  },
+  {
+    "id": "doc-cfa9efad4c6a",
+    "title": "Waterflooding_Recovery_Mechanics",
+    "fileName": "Waterflooding_Recovery_Mechanics.pdf",
+    "fileUrl": "/uploads/pres_812a87896bf248b1b5417a7f2de1a81b.pdf",
+    "coverUrl": "/uploads/cover_d14825e982f24484ac722271605d2d59.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:13:27.602325"
+  },
+  {
+    "id": "doc-3a2f2ca2adf0",
+    "title": "Interfacial_Tension_Engineering",
+    "fileName": "Interfacial_Tension_Engineering.pdf",
+    "fileUrl": "/uploads/pres_1aa69963fc0d4b8783c806cf9f578587.pdf",
+    "coverUrl": "/uploads/cover_b8e314d936c547f1a151c465a7892862.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:13:31.895961"
+  },
+  {
+    "id": "doc-2463c2e3bcf7",
+    "title": "Decoding_Pipeline_Pathology",
+    "fileName": "Decoding_Pipeline_Pathology.pdf",
+    "fileUrl": "/uploads/pres_66909b7642514a6e99af1a0542904379.pdf",
+    "coverUrl": "/uploads/cover_7337cb3d388d4115a095df6a91bc80ae.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:13:45.711955"
+  },
+  {
+    "id": "doc-b74bf3badfc9",
+    "title": "Subsurface_Diagnostic_Blueprint",
+    "fileName": "Subsurface_Diagnostic_Blueprint.pdf",
+    "fileUrl": "/uploads/pres_66dc47ecd0f0452f9886e29536e2da97.pdf",
+    "coverUrl": "/uploads/cover_6e2812aaa8f846918b25b91a15f0ceb9.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:14:40.164256"
+  },
+  {
+    "id": "doc-e28ca9260c21",
+    "title": "Subsurface_Reservoir_Blueprint",
+    "fileName": "Subsurface_Reservoir_Blueprint.pdf",
+    "fileUrl": "/uploads/pres_13a098066baa4e4c9c491000833adbd0.pdf",
+    "coverUrl": "/uploads/cover_e545be4bfaa24d21a2654d4b1a343bda.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:15:01.122784"
+  },
+  {
+    "id": "doc-fbd6b777f80d",
+    "title": "Geomechanical_Digital_Twins",
+    "fileName": "Geomechanical_Digital_Twins.pdf",
+    "fileUrl": "/uploads/pres_6a3002a0a2fc4ec693ef8b7f04952ba5.pdf",
+    "coverUrl": "/uploads/cover_be083c006e6c402e8e42a226e4876c42.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:15:10.989888"
+  },
+  {
+    "id": "doc-ac7ab3fa19e0",
+    "title": "Cased_Hole_Diagnostic_Blueprint",
+    "fileName": "Cased_Hole_Diagnostic_Blueprint.pdf",
+    "fileUrl": "/uploads/pres_f3497dd373b94f9e92fd132dc0bdae06.pdf",
+    "coverUrl": "/uploads/cover_bbd867d692de4880ba5b47d8794f51ef.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:15:18.153596"
+  },
+  {
+    "id": "doc-cc289bba59a4",
+    "title": "Subsurface Diagnostic Blueprint",
+    "fileName": "Subsurface Diagnostic Blueprint.pdf",
+    "fileUrl": "/uploads/pres_d74d3dc65ac540cf967f49555b922145.pdf",
+    "coverUrl": "/uploads/cover_a2a82bdcb79245b1bdd1182e6d1db7c9.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:15:38.439773"
+  },
+  {
+    "id": "doc-7fea18420441",
+    "title": "Oil_and_Gas_Separator_Engineering (1)",
+    "fileName": "Oil_and_Gas_Separator_Engineering (1).pdf",
+    "fileUrl": "/uploads/pres_2e36ff6663404de784c646151f7d6f0a.pdf",
+    "coverUrl": "/uploads/cover_e3aaaf045b55449e9c46ec7189be4052.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:16:00.006429"
+  },
+  {
+    "id": "doc-3102a7fe9851",
+    "title": "Well_Testing_Analysis",
+    "fileName": "Well_Testing_Analysis.pdf",
+    "fileUrl": "/uploads/pres_81613951cbec447bba6aac27fcc22065.pdf",
+    "coverUrl": "/uploads/cover_f36acaffda4d40248d4fd8c1fcb4dbd8.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:16:06.474666"
+  },
+  {
+    "id": "doc-78dbf3369029",
+    "title": "Strategic_Drilling_Roadmap",
+    "fileName": "Strategic_Drilling_Roadmap.pdf",
+    "fileUrl": "/uploads/pres_4b5e22b882f54d599a6223d12a60a5a6.pdf",
+    "coverUrl": "/uploads/cover_5efe156377df4850bacd6ad11e45d459.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:17:16.049789"
+  },
+  {
+    "id": "doc-b2ebcc7a60cb",
+    "title": "Shuaiba_Depot_Safety_Protocol",
+    "fileName": "Shuaiba_Depot_Safety_Protocol.pdf",
+    "fileUrl": "/uploads/pres_ae5d130dc70844d592c18b8da159cdef.pdf",
+    "coverUrl": "/uploads/cover_cd264019c410421ab4446b584cd19f66.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:17:23.032752"
+  },
+  {
+    "id": "doc-1088ad6e6d6c",
+    "title": "Subsurface_Gravity_Exploration",
+    "fileName": "Subsurface_Gravity_Exploration.pdf",
+    "fileUrl": "/uploads/pres_55461b2399c04b2797ebf27e25a73017.pdf",
+    "coverUrl": "/uploads/cover_cbb7fe0ebf704a7091c4ab20acfa780a.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:17:30.407737"
+  },
+  {
+    "id": "doc-8f94ef808612",
+    "title": "Reservoir_Coning_Dynamics",
+    "fileName": "Reservoir_Coning_Dynamics.pdf",
+    "fileUrl": "/uploads/pres_ed04157dd8864c65ba21ea494f1364a9.pdf",
+    "coverUrl": "/uploads/cover_d3d6b0369e11457b9e5b2ebbe096ac41.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:17:41.513744"
+  },
+  {
+    "id": "doc-0deb944b4998",
+    "title": "Digital_Reservoir_Simulation",
+    "fileName": "Digital_Reservoir_Simulation.pdf",
+    "fileUrl": "/uploads/pres_50a8fcfbb3a94714aa9575f7fd10b2d2.pdf",
+    "coverUrl": "/uploads/cover_b165192029414961b974e7885ff69cc2.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:17:47.583964"
+  },
+  {
+    "id": "doc-026f0505d3b9",
+    "title": "production Assignment sajjad k. hano",
+    "fileName": "production Assignment sajjad k. hano.pdf",
+    "fileUrl": "/uploads/pres_ad510e8392974496b729781d90d9d2d4.pdf",
+    "coverUrl": "/uploads/cover_59a11e3b15a04e3181cdc6d59235dd48.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:29:33.327193"
+  },
+  {
+    "id": "doc-2427c6132da1",
+    "title": "FDP سجاد خلدون هنو.pdf",
+    "fileName": "FDP سجاد خلدون هنو.pdf.pdf",
+    "fileUrl": "/uploads/pres_7afe28f0b8dd4ae38e63196923ab6c33.pdf",
+    "coverUrl": "/uploads/cover_fa2236ca37bd4b56925462bd74af7022.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-08-12T21:30:41.792112"
+  }
+]
