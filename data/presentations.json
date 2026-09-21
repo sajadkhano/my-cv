@@ -511,5 +511,176 @@
     "coverUrl": "uploads/cover_fa2236ca37bd4b56925462bd74af7022.jpg",
     "mimeType": "application/pdf",
     "uploadedAt": "2026-08-12T21:30:41.792112"
+  },
+  {
+    "id": "doc-10e76ae484ac",
+    "title": "Fractured Reservoir Modeling",
+    "fileName": "Fractured Reservoir Modeling.pdf",
+    "fileUrl": "/uploads/pres_d602c10373d7427786b82b69538319c3.pdf",
+    "coverUrl": "/uploads/cover_eff27ab51a1d4dbf9ab1ac0614edfc8d.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:49:48.459349"
+  },
+  {
+    "id": "doc-5bbc84f29ee0",
+    "title": "Precision Tracer Surveillance",
+    "fileName": "Precision Tracer Surveillance.pdf",
+    "fileUrl": "/uploads/pres_f936d8940a9f46ff9fa48e2b6bf48a47.pdf",
+    "coverUrl": "/uploads/cover_92e855fca3f842e09ccd85dd5ec371fd.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:49:55.711453"
+  },
+  {
+    "id": "doc-f9318b31d9d6",
+    "title": "The Natural Gas Imperative",
+    "fileName": "The Natural Gas Imperative.pdf",
+    "fileUrl": "/uploads/pres_7e6310ed9a194ecd88d7329382d303dc.pdf",
+    "coverUrl": "/uploads/cover_fb342771683d4795a2b1b7f754921e77.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:00.113133"
+  },
+  {
+    "id": "doc-927f824dc782",
+    "title": "Mastering Glycol Dehydration",
+    "fileName": "Mastering Glycol Dehydration.pptx",
+    "fileUrl": "/uploads/pres_91e0226392d54ec089eb12723b70629e.pptx",
+    "coverUrl": null,
+    "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "uploadedAt": "2026-09-22T00:50:07.847994"
+  },
+  {
+    "id": "doc-da1c0fdee7cd",
+    "title": "Tactical Gas Sweetening",
+    "fileName": "Tactical Gas Sweetening.pdf",
+    "fileUrl": "/uploads/pres_71bbc87f62344ce38e380a88fc881bea.pdf",
+    "coverUrl": "/uploads/cover_e5565e60729c455690746f293c641e22.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:13.782325"
+  },
+  {
+    "id": "doc-ea0b20aefe05",
+    "title": "Tactical Gas Sweetening",
+    "fileName": "Tactical Gas Sweetening.pdf",
+    "fileUrl": "/uploads/pres_074f9a52de5b4b0aa5c5b3c28a78c071.pdf",
+    "coverUrl": "/uploads/cover_bf2c904882b14f83889ae2008a1d66fc.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:17.431255"
+  },
+  {
+    "id": "doc-0570883d0c8d",
+    "title": "Liquid Loading Diagnostics",
+    "fileName": "Liquid Loading Diagnostics.pdf",
+    "fileUrl": "/uploads/pres_3d5c93f61d344ad4b5834ebec0620116.pdf",
+    "coverUrl": "/uploads/cover_3965f10f6f604a019c4a32ae21f560f2.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:25.799995"
+  },
+  {
+    "id": "doc-ff55693c9796",
+    "title": "The LNG Equilibrium",
+    "fileName": "The LNG Equilibrium.pdf",
+    "fileUrl": "/uploads/pres_d0f5aa5fba88402999649b1c37553e2e.pdf",
+    "coverUrl": "/uploads/cover_ff834848f8d3428bbc66864f1a50ecfd.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:29.974920"
+  },
+  {
+    "id": "doc-d8ca3c6f2556",
+    "title": "Gas Hydrate Management",
+    "fileName": "Gas Hydrate Management.pdf",
+    "fileUrl": "/uploads/pres_57a9f178146746b9a7bb05ea6cb02d54.pdf",
+    "coverUrl": "/uploads/cover_5b9fc53162954894b47138657128a1e7.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:48.896986"
+  },
+  {
+    "id": "doc-22f48060a4b7",
+    "title": "Natural Gas Phase Behavior",
+    "fileName": "Natural Gas Phase Behavior.pdf",
+    "fileUrl": "/uploads/pres_fe879de2a2da455cbe0b7933d33277aa.pdf",
+    "coverUrl": "/uploads/cover_151a0b2890ee4fe3b338d76b2ef907fe.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:50:55.481776"
+  },
+  {
+    "id": "doc-fc3bee9eeead",
+    "title": "TEG Dehydration Engineering",
+    "fileName": "TEG Dehydration Engineering.pdf",
+    "fileUrl": "/uploads/pres_da5b97a1a8854c15ad0132586d77c0b5.pdf",
+    "coverUrl": "/uploads/cover_949dfbd8198f487095f03da928384a85.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:00.283847"
+  },
+  {
+    "id": "doc-62c434d3558c",
+    "title": "Subsurface Reservoir Forecasting",
+    "fileName": "Subsurface Reservoir Forecasting.pdf",
+    "fileUrl": "/uploads/pres_ae54e37afc2b4d5a9b982b7f3411d875.pdf",
+    "coverUrl": "/uploads/cover_650a82feb5c447ac8f3e152e103faa3c.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:05.166728"
+  },
+  {
+    "id": "doc-c4d9dc5515fc",
+    "title": "Forensic Reservoir Decoding",
+    "fileName": "Forensic Reservoir Decoding.pdf",
+    "fileUrl": "/uploads/pres_b3a7c8ef5746474ca4b21e65b021b3c2.pdf",
+    "coverUrl": "/uploads/cover_03f33e914bc446f8bf5dc991735afab2.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:09.373984"
+  },
+  {
+    "id": "doc-fb787ea5c6cf",
+    "title": "Forensic Petroleum Geochemistry",
+    "fileName": "Forensic Petroleum Geochemistry.pdf",
+    "fileUrl": "/uploads/pres_d68e9247d4c24a10a6979e148f66f9bc.pdf",
+    "coverUrl": "/uploads/cover_2ffb757d9045415981b783f085cc7380.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:24.468324"
+  },
+  {
+    "id": "doc-09c1724c3def",
+    "title": "Surface Facility Engineering",
+    "fileName": "Surface Facility Engineering.pdf",
+    "fileUrl": "/uploads/pres_06f3fede4c464bdcaaba262300da9c2f.pdf",
+    "coverUrl": "/uploads/cover_edfdd8c03c22485f9718ac15f94edc35.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:32.448079"
+  },
+  {
+    "id": "doc-5eeb214bc123",
+    "title": "Wellbore Casing Design & Selection Workflow",
+    "fileName": "Wellbore Casing Design & Selection Workflow.pdf",
+    "fileUrl": "/uploads/pres_b37b16e9b8984dbeb8298f9f99f50777.pdf",
+    "coverUrl": "/uploads/cover_7820749185464abf968105559d6af2ff.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:51.590516"
+  },
+  {
+    "id": "doc-d9bba047963c",
+    "title": "Engineering_Heat_Recovery_Systems_Critical_&_Unconventional_Analysis",
+    "fileName": "Engineering_Heat_Recovery_Systems_Critical_&_Unconventional_Analysis.pdf",
+    "fileUrl": "/uploads/pres_42c59b459ad54b1686b4396f78417c8e.pdf",
+    "coverUrl": "/uploads/cover_cd2e38e213af4fc9a1f6700e5208ab46.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:51:59.647679"
+  },
+  {
+    "id": "doc-a9ed72bade97",
+    "title": "Strategic Casing Architecture",
+    "fileName": "Strategic Casing Architecture.pdf",
+    "fileUrl": "/uploads/pres_67ec15d2c5e64a39b7a66ef76e35ac90.pdf",
+    "coverUrl": "/uploads/cover_0b6c6fe1776e4cacac68b5ea1ceac073.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:52:05.228134"
+  },
+  {
+    "id": "doc-438ae28d1078",
+    "title": "Separator_Engineering_Blueprints (3).pdf",
+    "fileName": "Separator_Engineering_Blueprints (3).pdf.pdf",
+    "fileUrl": "/uploads/pres_cc41517e6db04fb491dbd7fcc6b2691c.pdf",
+    "coverUrl": "/uploads/cover_c9ff6f52178c443f9ad329b81f2c9c6f.jpg",
+    "mimeType": "application/pdf",
+    "uploadedAt": "2026-09-22T00:52:18.212384"
   }
 ]
