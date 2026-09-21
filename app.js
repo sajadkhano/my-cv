@@ -302,6 +302,36 @@ async function fetchPresentations() {
     presentationsData = JSON.parse(localStorage.getItem('portfolio_presentations')) || [];
 }
 
+async function fetchProjects() {
+    if (serverAvailable) {
+        try {
+            const res = await fetch('/api/projects');
+            if (res.ok) {
+                const data = await res.json();
+                if (Array.isArray(data) && data.length > 0) {
+                    projectsData = data;
+                    localStorage.setItem('portfolio_projects', JSON.stringify(projectsData));
+                    return;
+                }
+            }
+        } catch (_) {}
+    }
+    try {
+        const res = await fetch('data/projects.json');
+        if (res.ok) {
+            const data = await res.json();
+            if (Array.isArray(data) && data.length > 0) {
+                projectsData = data;
+                return;
+            }
+        }
+    } catch (_) {}
+    const stored = JSON.parse(localStorage.getItem('portfolio_projects'));
+    if (Array.isArray(stored) && stored.length > 0) {
+        projectsData = stored;
+    }
+}
+
 async function fetchContent() {
     if (serverAvailable) {
         try {
@@ -705,6 +735,146 @@ if (projectImgFileInput) {
         };
         reader.readAsDataURL(file);
     });
+}
+
+// ============================================================
+// ADD / EDIT / DELETE PROJECTS (Admin Console)
+// ============================================================
+
+function openAddProjectModal() {
+    const modal = document.getElementById('add-project-modal');
+    const form  = document.getElementById('add-project-form');
+    if (form) form.reset();
+    const prevBox = document.getElementById('proj-form-image-preview-box');
+    if (prevBox) prevBox.style.display = 'none';
+    const nameLabel = document.getElementById('proj-form-image-name');
+    if (nameLabel) nameLabel.innerText = 'No file chosen';
+    if (modal) modal.classList.add('active');
+}
+
+function closeAddProjectModal() {
+    const modal = document.getElementById('add-project-modal');
+    if (modal) modal.classList.remove('active');
+}
+
+function previewNewProjectImage(input) {
+    if (!input.files || !input.files[0]) return;
+    const file = input.files[0];
+    const nameLabel = document.getElementById('proj-form-image-name');
+    if (nameLabel) nameLabel.innerText = file.name;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        const img = document.getElementById('proj-form-image-preview');
+        const box = document.getElementById('proj-form-image-preview-box');
+        if (img) img.src = e.target.result;
+        if (box) box.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+}
+
+async function handleSaveProject(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('proj-form-submit-btn');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = '⏳ Saving...';
+    }
+
+    const title     = document.getElementById('proj-form-title').value.trim();
+    const type      = document.getElementById('proj-form-type').value.trim() || 'Engineering Project';
+    const focus     = document.getElementById('proj-form-focus').value.trim() || type;
+    const tagsRaw   = document.getElementById('proj-form-tags').value.trim();
+    const shortDesc = document.getElementById('proj-form-shortdesc').value.trim();
+    const detail    = document.getElementById('proj-form-detail').value.trim();
+    const fileInput = document.getElementById('proj-form-image');
+
+    const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean) : [type];
+    const detailHTML = detail ? `<h4>Project Overview</h4><p>${detail.replace(/\n/g, '<br>')}</p>` : `<h4>Project Overview</h4><p>${shortDesc}</p>`;
+
+    let savedProject = null;
+
+    if (serverAvailable) {
+        try {
+            const fd = new FormData();
+            fd.append('title', title);
+            fd.append('type', type);
+            fd.append('focus', focus);
+            fd.append('tags', tags.join(', '));
+            fd.append('shortDesc', shortDesc);
+            fd.append('detailHTML', detailHTML);
+            if (fileInput && fileInput.files[0]) {
+                fd.append('image', fileInput.files[0]);
+            }
+
+            const res = await fetch('/api/projects', {
+                method: 'POST',
+                body: fd
+            });
+            if (res.ok) {
+                savedProject = await res.json();
+            }
+        } catch (err) {
+            console.error('Server save error:', err);
+        }
+    }
+
+    if (!savedProject) {
+        // Fallback / Offline
+        const getImage = () => new Promise(resolve => {
+            if (fileInput && fileInput.files[0]) {
+                const r = new FileReader();
+                r.onload = ev => resolve(ev.target.result);
+                r.onerror = () => resolve('assets/hero_bg.png');
+                r.readAsDataURL(fileInput.files[0]);
+            } else {
+                resolve('assets/hero_bg.png');
+            }
+        });
+
+        const imgData = await getImage();
+        savedProject = {
+            id: `proj-${Date.now()}`,
+            title,
+            type,
+            focus,
+            tags,
+            shortDesc,
+            detailHTML,
+            img: imgData
+        };
+    }
+
+    // Add to local state & persist
+    projectsData.push(savedProject);
+    localStorage.setItem('portfolio_projects', JSON.stringify(projectsData));
+
+    renderProjects();
+    closeAddProjectModal();
+
+    if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '💾 Save Project / حفظ المشروع';
+    }
+
+    alert(`✓ تم إضافة مشروع "${title}" بنجاح!`);
+}
+
+async function handleDeleteProject(id) {
+    const proj = projectsData.find(p => p.id === id);
+    const title = proj ? proj.title : 'هذا المشروع';
+    if (!confirm(`هل أنت متأكد من حذف "${title}"؟`)) return;
+
+    if (serverAvailable) {
+        try {
+            await fetch(`/api/projects/${id}`, { method: 'DELETE' });
+        } catch (err) {
+            console.error('Server delete error:', err);
+        }
+    }
+
+    projectsData = projectsData.filter(p => p.id !== id);
+    localStorage.setItem('portfolio_projects', JSON.stringify(projectsData));
+    renderProjects();
 }
 
 // ============================================================
@@ -1501,6 +1671,10 @@ function renderProjects() {
                 <div class="project-img-wrapper">
                     <img src="${imgSrc}" alt="${proj.title}" class="project-img" loading="lazy">
                     <span class="project-overlay">${proj.type}</span>
+                    <button type="button" class="delete-project-btn admin-only" title="Delete Project / حذف المشروع"
+                            onclick="event.stopPropagation(); handleDeleteProject('${proj.id}')">
+                        🗑️
+                    </button>
                     <div class="change-project-img-overlay admin-only" title="Change Image"
                          onclick="triggerProjectImgUpload('${proj.id}')">
                         <span>📷 Change Image</span>
@@ -1522,16 +1696,21 @@ function renderProjects() {
             </div>
         `;
     });
-    html += `
-        <div class="project-card project-card-placeholder reveal" onclick="location.hash='#contact'">
-            <div class="placeholder-icon">+</div>
-            <h3 class="project-title">Your Project Here</h3>
-            <p class="project-desc" style="margin-top:0.5rem;font-size:0.9rem;">
-                Looking to automate field workflows or deploy custom simulators? Let's collaborate.
-            </p>
-            <span class="project-tag" style="margin-top:1.5rem;display:inline-block;">Open for Collaboration</span>
-        </div>
-    `;
+
+    if (isAdminMode) {
+        html += `
+            <div class="project-card project-card-placeholder reveal admin-only" onclick="openAddProjectModal()" style="cursor:pointer; border: 2px dashed var(--primary-accent); min-height:280px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+                <div class="placeholder-icon" style="color:var(--primary-accent); font-size:2.2rem; margin-bottom:0.75rem;">+</div>
+                <h3 class="project-title" style="color:var(--primary-accent); font-size:1.25rem;">Add New Project</h3>
+                <p class="project-desc" style="margin-top:0.5rem;font-size:0.9rem; max-width:280px;">
+                    انقر هنا لفتح نافذة إضافة مشروع منجز جديد مع الصور والتفاصيل.
+                </p>
+                <span class="project-tag" style="margin-top:1.25rem;display:inline-block; background:rgba(0, 194, 168, 0.15); color:var(--primary-accent); border:1px solid var(--primary-accent); font-weight:600;">
+                    ➕ إضافة مشروع
+                </span>
+            </div>
+        `;
+    }
     grid.innerHTML = html;
 }
 
@@ -2122,6 +2301,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await Promise.all([
         fetchServerImages(),
         fetchPresentations(),
+        fetchProjects(),
         fetchContent(),
         fetchCV()
     ]);

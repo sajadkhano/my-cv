@@ -1,0 +1,46 @@
+[
+  {
+    "id": "hammar-simulation",
+    "type": "Software Tool / Simulation",
+    "title": "Hammar IPF Simulation Application",
+    "shortDesc": "A custom simulation application modeling Inflow Performance Relationship (IPR) and production forecasting for the Hammar field, translating reservoir data into actionable performance predictions.",
+    "focus": "Reservoir Simulation & Forecasting",
+    "tags": [
+      "Python",
+      "Simulation",
+      "Production Forecasting",
+      "Dashboard"
+    ],
+    "img": "assets/hammar_dashboard.png",
+    "detailHTML": "<h4>Project Overview</h4><p>The Hammar Inflow Performance Relationship (IPR) Simulation Application is a customized tool designed to evaluate well performance and forecast future oil production in the Hammar reservoir. By integrating static reservoir data with dynamic production records, this application assists engineers in assessing well productivity and identifying bottlenecking in real-time.</p><h4>Simulation Workflow</h4><div class=\"formula-block\">[Field Data Input] ➔ [Vogel's IPR Logic Layer] ➔ [Production Curve Forecasting] ➔ [Dashboard Display]</div><ul><li><strong>Data Ingestion:</strong> Gathers flowing bottom-hole pressure, static reservoir pressure, and water-cut data.</li><li><strong>Computational Model:</strong> Implements Vogel's and Wiggins' models for multiphase flow calculations.</li><li><strong>Forecasting:</strong> Models decline curve analysis (DCA) under various artificial lift scenarios.</li></ul><h4>Business Value</h4><p>Replaces time-consuming, spreadsheet-based predictions with a unified python dashboard, accelerating decision-making by over 40% and offering highly accurate drawdown forecasts to prevent reservoir damage.</p>"
+  },
+  {
+    "id": "smart-decision-support",
+    "type": "AI-assisted Engineering Tool",
+    "title": "Smart Decision Support System",
+    "shortDesc": "A decision-support system leveraging AI tools and Python-built dashboards to help engineers navigate complex drilling and production decisions faster and with more confidence.",
+    "focus": "AI-Driven Decision Optimization",
+    "tags": [
+      "AI Tools",
+      "Python",
+      "Dashboard Development",
+      "Decision Support"
+    ],
+    "img": "assets/dss_dashboard.png",
+    "detailHTML": "<h4>Project Overview</h4><p>Traditional oil & gas drilling processes involve highly dynamic environments where delayed decisions lead to costly non-productive time (NPT). This Smart Decision Support System acts as a digital advisor, analyzing drilling parameters to warn engineers of potential risks (like pipe sticking or circulation loss) and recommending optimal solutions.</p><h4>Architecture Flow</h4><div class=\"formula-block\">Real-Time Mud & ROP Data ➔ AI Predictive Engine ➔ Risk Grading ➔ Actionable Engineer Advice</div><h4>Key Features</h4><ul><li><strong>Anomaly Detection:</strong> Monitors Rate of Penetration (ROP), torque, and mud weight patterns.</li><li><strong>Interactive Advisory Grid:</strong> Recommends corrective actions validated by historical offset well datasets.</li><li><strong>Intelligent Assistant:</strong> Merges manual engineering rule-books with LLM agents to resolve complex diagnostics.</li></ul>"
+  },
+  {
+    "id": "separation-oil-gas",
+    "type": "Academic / Technical Research",
+    "title": "Separation in Oil & Gas (Graduation Research)",
+    "shortDesc": "Graduation research examining separator types and design principles used in oil & gas surface facilities, including material balance analysis for separation efficiency.",
+    "focus": "Surface Facilities & Thermodynamics",
+    "tags": [
+      "Separator Design",
+      "Material Balance",
+      "Research"
+    ],
+    "img": "assets/hero_bg.png",
+    "detailHTML": "<h4>Research Scope</h4><p>This graduation research focuses on the mechanics and thermodynamic principles of separating oil, gas, and water in surface production facilities. It reviews horizontal, vertical, and spherical separators, evaluating their design limits and fluid behavior under varying reservoir compositions.</p><h4>Technical Material Balance Equations</h4><div class=\"formula-block\">Total Material Balance: F = V + L<br>Component Material Balance: F · z_i = V · y_i + L · x_i</div><h4>Key Findings</h4><p>Investigated droplet settling velocities using Souders-Brown equations, verifying that horizontal separator configurations outperform vertical designs by up to 25% for high gas-to-oil ratio (GOR) wells in Iraqi fields.</p>"
+  }
+]

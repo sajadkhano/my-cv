@@ -224,6 +224,11 @@
                     <span class="section-badge">// 02. Engineering Portfolio</span>
                     <h2 class="section-title" data-content-key="projects_title">Key Projects</h2>
                     <p class="section-desc" data-content-key="projects_desc">Data-driven systems, simulations, and graduation research in petroleum engineering and code.</p>
+                    <div class="admin-only" style="margin-top: 1.25rem;">
+                        <button type="button" class="btn btn-primary" onclick="openAddProjectModal()" style="display:inline-flex; align-items:center; gap:8px; padding: 10px 22px; font-weight:600; cursor:pointer; box-shadow: 0 4px 14px rgba(0, 240, 255, 0.25);">
+                            <span style="font-size:1.1rem;">➕</span> Add New Project / إضافة مشروع جديد
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="projects-grid" id="projects-grid">
@@ -471,6 +476,66 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- ADD/EDIT PROJECT MODAL (Admin-Only) -->
+    <div class="modal-overlay" id="add-project-modal" role="dialog" aria-modal="true">
+        <div class="modal-window" style="max-width: 650px; padding: 2rem;">
+            <button class="modal-close-btn" id="add-project-modal-close" onclick="closeAddProjectModal()" aria-label="Close form">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+            <div class="modal-header-info" style="margin-bottom: 1.5rem;">
+                <span class="section-badge">// Admin Console</span>
+                <h3 class="modal-title" style="margin-top: 0.25rem;">Add Completed Project / إضافة مشروع منجز</h3>
+            </div>
+            <form id="add-project-form" onsubmit="handleSaveProject(event)">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Project Title * / عنوان المشروع</label>
+                    <input type="text" id="proj-form-title" class="custom-input" placeholder="e.g. Pipeline Pressure Monitoring System" required style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem;">
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Category / Type / نوع المشروع</label>
+                        <input type="text" id="proj-form-type" class="custom-input" placeholder="e.g. Software Tool / Safety" style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem;">
+                    </div>
+                    <div class="form-group">
+                        <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Focus Area / مجال التركيز</label>
+                        <input type="text" id="proj-form-focus" class="custom-input" placeholder="e.g. Real-Time Automation" style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem;">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Tech Stack / Tags (Comma separated) / التقنيات المستخدمة</label>
+                    <input type="text" id="proj-form-tags" class="custom-input" placeholder="e.g. Python, AI, OPC Safety, Laboratory" style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Short Summary (Card) / وصف مختصر للبطاقة *</label>
+                    <textarea id="proj-form-shortdesc" class="custom-input" rows="3" placeholder="Brief explanation shown on the project card..." required style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem; resize:vertical;"></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Project Image / صورة المشروع</label>
+                    <div style="display:flex; gap:1rem; align-items:center;">
+                        <input type="file" id="proj-form-image" accept="image/*" style="display:none;" onchange="previewNewProjectImage(this)">
+                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('proj-form-image').click()" style="padding:0.6rem 1.2rem; cursor:pointer;">
+                            📷 Choose Image / اختر صورة
+                        </button>
+                        <span id="proj-form-image-name" style="font-size:0.85rem; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:200px;">No file chosen</span>
+                    </div>
+                    <div id="proj-form-image-preview-box" style="display:none; margin-top:0.75rem;">
+                        <img id="proj-form-image-preview" src="" alt="Preview" style="max-height:140px; border-radius:8px; object-fit:cover; border:1px solid var(--border-color);">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem; color:var(--text-secondary);">Full Details & Overview (Modal) / التفاصيل الكاملة للمشروع</label>
+                    <textarea id="proj-form-detail" class="custom-input" rows="4" placeholder="Detailed workflow, metrics, findings, or achievements..." style="width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border-color); background:var(--bg-card); color:var(--text-primary); font-size:0.95rem; resize:vertical;"></textarea>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:0.75rem;">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddProjectModal()" style="padding:0.75rem 1.5rem; cursor:pointer;">Cancel / إلغاء</button>
+                    <button type="submit" id="proj-form-submit-btn" class="btn btn-primary" style="padding:0.75rem 1.5rem; cursor:pointer;">💾 Save Project / حفظ المشروع</button>
+                </div>
+            </form>
         </div>
     </div>
 

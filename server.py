@@ -36,6 +36,7 @@ IMGS_FILE   = os.path.join(DATA_DIR, 'images.json')
 GALLERY_FILE= os.path.join(DATA_DIR, 'gallery.json')
 CONTENT_FILE= os.path.join(DATA_DIR, 'content.json')
 CV_FILE     = os.path.join(DATA_DIR, 'cv.json')
+PROJECTS_FILE = os.path.join(DATA_DIR, 'projects.json')
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(DATA_DIR,   exist_ok=True)
@@ -92,7 +93,7 @@ def serve_upload(filename):
 @app.route('/<path:filename>')
 def static_catch(filename):
     safe_exts = {'.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.webp',
-                 '.svg', '.ico', '.woff', '.woff2', '.ttf', '.pdf'}
+                 '.svg', '.ico', '.woff', '.woff2', '.ttf', '.pdf', '.json'}
     ext = os.path.splitext(filename)[1].lower()
     if ext in safe_exts:
         try:
@@ -100,6 +101,103 @@ def static_catch(filename):
         except Exception:
             abort(404)
     abort(404)
+
+# ── Projects API ───────────────────────────────────────────────────────────────
+@app.route('/api/projects', methods=['GET'])
+def get_projects():
+    return jsonify(load_json(PROJECTS_FILE, []))
+
+
+@app.route('/api/projects', methods=['POST'])
+def add_project():
+    projects = load_json(PROJECTS_FILE, [])
+    
+    # Check if multipart form or JSON
+    if request.content_type and 'multipart/form-data' in request.content_type:
+        title     = request.form.get('title', '').strip()
+        ptype     = request.form.get('type', 'Engineering Project').strip()
+        shortDesc = request.form.get('shortDesc', '').strip()
+        focus     = request.form.get('focus', '').strip()
+        tags_raw  = request.form.get('tags', '')
+        detailHTML= request.form.get('detailHTML', '').strip()
+        img_url   = request.form.get('img', 'assets/hero_bg.png')
+        
+        # Handle file upload if present
+        if 'image' in request.files:
+            f = request.files['image']
+            if f and f.filename:
+                ext   = os.path.splitext(secure_filename(f.filename))[1].lower() or '.jpg'
+                fname = f"proj_{uuid.uuid4().hex}{ext}"
+                f.save(os.path.join(UPLOAD_DIR, fname))
+                img_url = f"/uploads/{fname}"
+    else:
+        data = request.get_json(silent=True) or {}
+        title     = data.get('title', '').strip()
+        ptype     = data.get('type', 'Engineering Project').strip()
+        shortDesc = data.get('shortDesc', '').strip()
+        focus     = data.get('focus', '').strip()
+        tags_raw  = data.get('tags', '')
+        detailHTML= data.get('detailHTML', '').strip()
+        img_url   = data.get('img', 'assets/hero_bg.png')
+
+    if not title:
+        return jsonify({'error': 'Title is required'}), 400
+
+    if isinstance(tags_raw, list):
+        tags = tags_raw
+    else:
+        tags = [t.strip() for t in str(tags_raw).split(',') if t.strip()]
+
+    proj_id = f"proj-{uuid.uuid4().hex[:10]}"
+    if not detailHTML:
+        detailHTML = f"<h4>Project Overview</h4><p>{shortDesc or title}</p>"
+
+    new_proj = {
+        'id': proj_id,
+        'title': title,
+        'type': ptype,
+        'shortDesc': shortDesc,
+        'focus': focus or ptype,
+        'tags': tags,
+        'img': img_url,
+        'detailHTML': detailHTML,
+        'createdAt': datetime.now().isoformat()
+    }
+    projects.append(new_proj)
+    save_json(PROJECTS_FILE, projects)
+    return jsonify(new_proj), 201
+
+
+@app.route('/api/projects/<proj_id>', methods=['DELETE'])
+def delete_project(proj_id):
+    projects = load_json(PROJECTS_FILE, [])
+    proj = next((p for p in projects if p['id'] == proj_id), None)
+    if not proj:
+        return jsonify({'error': 'Not found'}), 404
+    img = proj.get('img', '')
+    if img.startswith('/uploads/'):
+        fpath = os.path.join(UPLOAD_DIR, img[len('/uploads/'):])
+        if os.path.exists(fpath):
+            try: os.remove(fpath)
+            except OSError: pass
+    projects = [p for p in projects if p['id'] != proj_id]
+    save_json(PROJECTS_FILE, projects)
+    return jsonify({'success': True})
+
+
+@app.route('/api/projects/<proj_id>', methods=['PATCH', 'PUT'])
+def update_project(proj_id):
+    projects = load_json(PROJECTS_FILE, [])
+    proj = next((p for p in projects if p['id'] == proj_id), None)
+    if not proj:
+        return jsonify({'error': 'Not found'}), 404
+    data = request.get_json(silent=True) or {}
+    for k in ('title', 'type', 'shortDesc', 'focus', 'tags', 'img', 'detailHTML'):
+        if k in data:
+            proj[k] = data[k]
+    save_json(PROJECTS_FILE, projects)
+    return jsonify(proj)
+
 
 # ── Presentations API ──────────────────────────────────────────────────────────
 @app.route('/api/presentations', methods=['GET'])
