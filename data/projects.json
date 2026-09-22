@@ -42,5 +42,48 @@
     ],
     "img": "assets/hero_bg.png",
     "detailHTML": "<h4>Research Scope</h4><p>This graduation research focuses on the mechanics and thermodynamic principles of separating oil, gas, and water in surface production facilities. It reviews horizontal, vertical, and spherical separators, evaluating their design limits and fluid behavior under varying reservoir compositions.</p><h4>Technical Material Balance Equations</h4><div class=\"formula-block\">Total Material Balance: F = V + L<br>Component Material Balance: F · z_i = V · y_i + L · x_i</div><h4>Key Findings</h4><p>Investigated droplet settling velocities using Souders-Brown equations, verifying that horizontal separator configurations outperform vertical designs by up to 25% for high gas-to-oil ratio (GOR) wells in Iraqi fields.</p>"
+  },
+  {
+    "id": "proj-2b22b429f0",
+    "title": "water injection program",
+    "type": "engineering",
+    "shortDesc": "The Process (Water Injection): Easily model how water is pumped underground to sweep oil toward the surface.\r\n Sweeping Power (Displacement Efficiency): Measure exactly how much oil the water successfully pushes out.\r\n Perfect Timing (Injection Duration): Calculate the exact time needed to keep pumping for the best results.\r\n Ideal Spacing (Required Distance): Find the best distance between the water entry point and the oil exit point.\r\n Smart Patterns (Injection Type): Choose the best layout (like a grid or a line) to pump the water effectively.",
+    "focus": "EOR",
+    "tags": [
+      "python",
+      "Ai"
+    ],
+    "img": "/uploads/proj_b5dad316aa784c2290a8fa6054c4d6b7.jpeg",
+    "detailHTML": "<h4>Project Overview</h4><p>The Process (Water Injection): Easily model how water is pumped underground to sweep oil toward the surface.\r\n Sweeping Power (Displacement Efficiency): Measure exactly how much oil the water successfully pushes out.\r\n Perfect Timing (Injection Duration): Calculate the exact time needed to keep pumping for the best results.\r\n Ideal Spacing (Required Distance): Find the best distance between the water entry point and the oil exit point.\r\n Smart Patterns (Injection Type): Choose the best layout (like a grid or a line) to pump the water effectively.</p>",
+    "createdAt": "2026-09-22T02:18:10.072452"
+  },
+  {
+    "id": "proj-91b073d31e",
+    "title": "data analysis",
+    "type": "engineering",
+    "shortDesc": "Data-driven decisions, not guesses",
+    "focus": "analysis",
+    "tags": [
+      "python",
+      "Ai"
+    ],
+    "img": "/uploads/proj_d3e24518f9a24bbfa771ae79d9f33e48.jpeg",
+    "detailHTML": "<h4>Project Overview</h4><p>For Results and Decisions<br> \"Transforming construction data into actionable insights.\"<br> \"Data-driven decisions, not guesses.\"<br> \"Empowering construction with smarter decision-making.\"<br>For Efficiency and Costs<br> \"Optimize schedules and reduce costs with data.\"<br> \"Maximize efficiency, minimize waste on-site.\"<br> \"The faster, smarter way to build: construction analytics.\"<br>For Future and Technology<br> \"Built with concrete, guided by data. The future of construction.\"<br> \"Unlocking the potential of technology in the construction industry.\"<br> \"Bridging the gap between engineering and data science.\"</p>",
+    "createdAt": "2026-09-22T02:32:55.551739"
+  },
+  {
+    "id": "proj-a1571d82a9",
+    "title": "platform engineering decisions",
+    "type": "engineering",
+    "shortDesc": "engineering decisions and calculations",
+    "focus": "petroleum engineer",
+    "tags": [
+      "python",
+      "Ai",
+      "* SPE: Society of Petroleum Engineers  * JPT: Journal of Petroleum Technology  * AAPG: American Association of Petroleum Geologists  * EAGE: European Association of Geoscientists and Engineers  * SEG: Society of Exploration Geophysicists  * API: American Petroleum Institute  * RP: Recommended Practices  * ISO: International Organization for Standardization   ASME: American Society of Mechanical Engineers  * SLB: Schlumberger"
+    ],
+    "img": "/uploads/proj_1d9a3cc03e304b0ca4f4388bb245b459.jpeg",
+    "detailHTML": "<h4>Project Overview</h4><p>This platform serves as an integrated digital assistant specifically designed for petroleum engineers and field personnel, acting as a central hub to support critical engineering decision-making. The platform focuses on transforming field data into accurate engineering insights by providing advanced computational tools and simulation models within a unified workspace.<br>Core Value of the Platform:<br>It minimizes the time spent on complex calculations and data collection from scattered sources, empowering engineers to focus entirely on reviewing results, evaluating different scenarios, and understanding risks before making any operational or field development decisions.<br>Main Engineering Modules Covered:<br> * Production and Surface Facilities Engineering: Provides advanced tools for Nodal Analysis, evaluating well flow performance, and designing and optimizing the efficiency of two-phase and three-phase separators.</p>",
+    "createdAt": "2026-09-22T02:54:23.018482"
   }
 ]

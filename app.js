@@ -646,13 +646,20 @@ function checkAdminMode() {
     const params       = new URLSearchParams(window.location.search);
     const isLocal      = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
     const forceVisitor = params.has('visitor') || params.has('preview');
-    const forceAdmin   = params.has('edit')    || params.has('admin') ||
-                         localStorage.getItem('portfolio_admin_mode') === 'true';
+    
+    // Security lock: When shared online, prevent any visitor from accessing admin controls
+    const secretKey    = params.get('admin') || params.get('edit');
+    const isAuthorized = secretKey === 'sajad2026' || secretKey === 'sajadhano';
+    
+    // On local machine (Sajjad's device), admin mode is available.
+    // On any public / shared link, it is strictly LOCKED in Read-Only Visitor Mode unless authorized.
+    const allowAdmin   = isLocal || isAuthorized;
+    const adminRequested = params.has('edit') || params.has('admin') || localStorage.getItem('portfolio_admin_mode') === 'true';
 
-    isAdminMode = (isLocal || forceAdmin) && !forceVisitor;
+    isAdminMode = allowAdmin && (isLocal || adminRequested) && !forceVisitor;
 
     document.body.classList.toggle('admin-mode', isAdminMode);
-    console.log(isAdminMode ? '🔑 Admin Mode Active' : '👁️ Visitor Mode');
+    console.log(isAdminMode ? '🔑 Admin Mode Active' : '🔒 Protected Read-Only Visitor Mode');
     return isAdminMode;
 }
 
