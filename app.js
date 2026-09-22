@@ -93,17 +93,40 @@ const defaultProjects = [
 
 const defaultSkills = {
     engineering: [
-        { name: "Safety & Firefighting Operations", percent: 90 },
-        { name: "Quality Control & Laboratories",   percent: 85 },
-        { name: "Pipeline Administrative Management", percent: 80 },
-        { name: "Separator Design",                 percent: 80 },
-        { name: "Material Balance",                 percent: 85 }
+        "Safety & Firefighting Operations",
+        "Quality Control & Laboratories",
+        "Pipeline Administrative Management",
+        "Separator Design",
+        "Material Balance",
+        "Data anlaysis",
+        "pipesim",
+        "well logging",
+        "QA/QC",
+        "Drilling Operations",
+        "EOR Oprations",
+        "DE",
+        "DBM",
+        "BOP control",
+        "API",
+        "Simulator",
+        "Techlog",
+        "HSE",
+        "FDP",
+        "PMP",
+        "ASTM"
     ],
     tech: [
-        { name: "Python Development",               percent: 90 },
-        { name: "Dashboard Development",            percent: 85 },
-        { name: "AI Tools Integration",             percent: 90 },
-        { name: "GitHub Copilot / Prompting",       percent: 95 }
+        "Python Development",
+        "Dashboard Development",
+        "AI Tools Integration",
+        "GitHub Copilot / Prompting",
+        "Adobe Acrobat",
+        "Clude ai",
+        "Microsoft Office",
+        "AutoCAD",
+        "web Development",
+        "Professional presentation",
+        "Research development"
     ]
 };
 
@@ -161,7 +184,7 @@ const _stored_certs      = JSON.parse(localStorage.getItem('portfolio_certs'));
 const _stored_leadership = JSON.parse(localStorage.getItem('portfolio_leadership'));
 
 let projectsData   = (Array.isArray(_stored_projects) && _stored_projects.length > 0)     ? _stored_projects   : defaultProjects;
-let skillsData     = (_stored_skills && Object.keys(_stored_skills).length > 0)            ? _stored_skills     : defaultSkills;
+let skillsData     = (_stored_skills && Object.keys(_stored_skills).length > 0 && (_stored_skills.engineering || []).length >= defaultSkills.engineering.length) ? _stored_skills : defaultSkills;
 let certsData      = (Array.isArray(_stored_certs)    && _stored_certs.length > 0)        ? _stored_certs      : defaultCerts;
 let leadershipData = (Array.isArray(_stored_leadership) && _stored_leadership.length > 0) ? _stored_leadership : defaultLeadership;
 
@@ -172,6 +195,13 @@ function saveLeadershipData() {
 
 function saveSkillsData() {
     localStorage.setItem('portfolio_skills', JSON.stringify(skillsData));
+    if (serverAvailable) {
+        fetch('/api/skills', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(skillsData)
+        }).catch(() => {});
+    }
 }
 
 function promptAddLeadership() {
@@ -330,6 +360,35 @@ async function fetchProjects() {
     if (Array.isArray(stored) && stored.length > 0) {
         projectsData = stored;
     }
+}
+
+async function fetchSkills() {
+    if (serverAvailable) {
+        try {
+            const res = await fetch('/api/skills');
+            if (res.ok) {
+                const data = await res.json();
+                if (data && data.engineering && data.engineering.length >= defaultSkills.engineering.length) {
+                    skillsData = data;
+                    localStorage.setItem('portfolio_skills', JSON.stringify(skillsData));
+                    return;
+                }
+            }
+        } catch (_) {}
+    }
+    try {
+        const res = await fetch('data/skills.json');
+        if (res.ok) {
+            const data = await res.json();
+            if (data && data.engineering && data.engineering.length >= defaultSkills.engineering.length) {
+                skillsData = data;
+                localStorage.setItem('portfolio_skills', JSON.stringify(skillsData));
+                return;
+            }
+        }
+    } catch (_) {}
+    skillsData = defaultSkills;
+    localStorage.setItem('portfolio_skills', JSON.stringify(skillsData));
 }
 
 async function fetchContent() {
@@ -2309,6 +2368,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         fetchServerImages(),
         fetchPresentations(),
         fetchProjects(),
+        fetchSkills(),
         fetchContent(),
         fetchCV()
     ]);

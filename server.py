@@ -37,6 +37,7 @@ GALLERY_FILE= os.path.join(DATA_DIR, 'gallery.json')
 CONTENT_FILE= os.path.join(DATA_DIR, 'content.json')
 CV_FILE     = os.path.join(DATA_DIR, 'cv.json')
 PROJECTS_FILE = os.path.join(DATA_DIR, 'projects.json')
+SKILLS_FILE = os.path.join(DATA_DIR, 'skills.json')
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(DATA_DIR,   exist_ok=True)
@@ -197,6 +198,19 @@ def update_project(proj_id):
             proj[k] = data[k]
     save_json(PROJECTS_FILE, projects)
     return jsonify(proj)
+
+
+# ── Skills API ────────────────────────────────────────────────────────────────
+@app.route('/api/skills', methods=['GET'])
+def get_skills():
+    return jsonify(load_json(SKILLS_FILE, {}))
+
+
+@app.route('/api/skills', methods=['POST'])
+def save_skills():
+    data = request.get_json(silent=True) or {}
+    save_json(SKILLS_FILE, data)
+    return jsonify(data)
 
 
 # ── Presentations API ──────────────────────────────────────────────────────────
